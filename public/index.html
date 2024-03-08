@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>BrazilicAI</title>
+</head>
+<body>
+  <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <!-- Logo insertion -->
+              <div class="text-center mb-4">
+                <img src="https://www.brazilica.com.au/img/logo_dark.png" alt="Brazilica" class="img-fluid">
+              </div>
+              <div class="upload-form">
+                  <h2 class="text-center mb-4">Upload Timesheet</h2>
+                  <form action="/upload" method="post" enctype="multipart/form-data">
+                      <div class="form-group">
+                          <input type="file" name="timesheet" id="timesheet" class="form-control-file" required>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id='result' style='display:none;' class='image-result-container'>
+      <img id='processedImage' src='' class='img-fluid' alt='Processed Timesheet' />
+      <div class='download-btn-container'>
+          <a id='downloadButton' href='' download class='btn btn-success'>Download</a>
+      </div>
+  </div>
+  <div class="modal" tabindex="-1" role="dialog" id="spreadsheetPromptModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="background-color: var(--btn-primary-color); color: var(--btn-secondary-color); padding: 5px 10px; border-radius: 5px;">MyBrazilica</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Would you like me to also pre-fill this timesheet into a new Spreadsheet using the Brazilica Timesheet Template?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="yesSpreadsheet">Yes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

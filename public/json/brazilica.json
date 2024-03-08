@@ -1,0 +1,36 @@
+{
+  "days": [
+    {
+      "weekday": "",
+      "date": {
+        "month": 0,
+        "day": 0
+      },
+      "start_time": null,
+      "lunch_duration": null,
+      "finish_time": null,
+      "hours_worked": 0.0,
+      "kpi": ""
+    },
+    {
+      "weekday": "",
+      "date": {
+        "month": 0,
+        "day": 0
+      },
+      "start_time": "",
+      "lunch_duration": "",
+      "finish_time": "",
+      "hours_worked": 0.0,
+      "kpi": ""
+    },
+    // ... Repeat for each day of the week
+  ],
+  "notes": "",
+  "totals": {
+    "hours": "",
+    "treatment_pack": "",
+    "saturdays": "",
+    "total_kpi": ""
+  }
+}

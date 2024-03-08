@@ -1,0 +1,83 @@
+{
+  "days": [
+    {
+      "weekday": "Monday",
+      "date": {
+        "month": 6,
+        "day": 6
+      },
+      "start_time": null,
+      "lunch_duration": null,
+      "finish_time": null,
+      "hours_worked": 0.0,
+      "kpi": "$1,180"
+    },
+    {
+      "weekday": "Tuesday",
+      "date": {
+        "month": 7,
+        "day": 6
+      },
+      "start_time": "09:45",
+      "lunch_duration": "45 min.",
+      "finish_time": "7:15",
+      "hours_worked": 8.75,
+      "kpi": "$1,123"
+    },
+    {
+      "weekday": "Wednesday",
+      "date": {
+        "month": 7,
+        "day": 6
+      },
+      "start_time": "09:45",
+      "lunch_duration": "45 min.",
+      "finish_time": "7:15",
+      "hours_worked": 8.75,
+      "kpi": "$1,123"
+    },
+    {
+      "weekday": "Thursday",
+      "date": {
+        "month": 7,
+        "day": 6
+      },
+      "start_time": "09:45",
+      "lunch_duration": "45 min.",
+      "finish_time": "7:15",
+      "hours_worked": 8.75,
+      "kpi": "$1,123"
+    },
+    {
+      "weekday": "Friday",
+      "date": {
+        "month": 7,
+        "day": 6
+      },
+      "start_time": "09:45",
+      "lunch_duration": "45 min.",
+      "finish_time": "7:15",
+      "hours_worked": 8.75,
+      "kpi": "$1,123"
+    },
+    {
+      "weekday": "Saturday",
+      "date": {
+        "month": 7,
+        "day": 6
+      },
+      "start_time": "09:45",
+      "lunch_duration": "45 min.",
+      "finish_time": "7:15",
+      "hours_worked": 8.75,
+      "kpi": "$1,123"
+    }
+  ],
+  "notes": "*Washed brown towels with washing machine (citrus: flors)",
+  "totals": {
+    "hours": "$22 Hrs",
+    "treatment_pack": "Treatment pack",
+    "saturdays": "$542",
+    "total_kpi": "Total $5327"
+  }
+}
