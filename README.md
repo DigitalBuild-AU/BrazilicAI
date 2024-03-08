@@ -64,3 +64,6 @@ BrazilicAI is provided under the ISC license. For more information, please see `
 
 - Thanks to the Brazilica staff for their valuable feedback.
 - Appreciation goes to all contributors involved in developing BrazilicAI.
+For more details on contributing, please see [CONTRIBUTING.md](./CONTRIBUTING.md).
+- Thanks to the Brazilica staff for their valuable feedback.
+- Appreciation goes to all contributors involved in developing BrazilicAI.
