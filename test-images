@@ -1,0 +1,1 @@
+<!-- Since the request is to create a directory and not to write a new file, this section is not applicable. Directories are created through filesystem operations and do not contain file content. -->
