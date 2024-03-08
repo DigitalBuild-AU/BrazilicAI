@@ -17,7 +17,7 @@ To set up BrazilicAI on your local environment, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository/BrazilicAI.git
+   git clone https://github.com/DigitalBuild-AU/BrazilicAI.git
    ```
 2. Navigate to the directory:
    ```bash
