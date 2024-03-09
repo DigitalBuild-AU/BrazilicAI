@@ -49,8 +49,10 @@ The server will start, and the PWA can be accessed by navigating to `http://loca
 - `/app.js`: Sets up the server and routes.
 - `public/*`: Contains front-end HTML, JS, and CSS.
 - `/file-management.js`: Ensures upload directory exists.
-- `/imageProcessor.js`: Placeholder for the timesheet image processing workflow.
-- `/spreadsheetProcessor.js`: Placeholder for the timesheet spreadsheet processing workflow.
+- `/imageProcessor.js`: Handles the image processing logic for timesheet correction.
+- `/spreadsheetProcessor.js`: Manages the conversion of processed timesheets into spreadsheet format.
+- `public/scripts.js`: Contains client-side JavaScript for handling UI interactions and asynchronous requests.
+- `tests/`: Contains unit tests for image and spreadsheet processing logic.
 
 ## Contributing
 
