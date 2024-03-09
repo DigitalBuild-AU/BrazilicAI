@@ -23,7 +23,12 @@ To set up BrazilicAI on your local environment, follow these steps:
    ```bash
    cd BrazilicAI
    ```
-3. Install the dependencies:
+3. Install the dependencies (including new dependencies for image processing):
+   ```bash
+   npm install
+   npm install openai
+   npm install tesseract.js
+   ```
    ```bash
    npm install
    ```
@@ -59,8 +64,19 @@ Contributions are welcome. Please read `CONTRIBUTING.md` for details on our code
 ## License
 
 BrazilicAI is provided under the ISC license. For more information, please see `LICENSE.md`.
+- `/ImageProcessor.Alt.js`: Contains the alternative image processing logic using Tesseract.
+- `/test-images`: Directory for storing test images.
 
 ## Acknowledgments
 
 - Thanks to the Brazilica staff for their valuable feedback.
 - Appreciation goes to all contributors involved in developing BrazilicAI.
+## Image Processing
+
+BrazilicAI now includes advanced image processing capabilities to handle timesheet images more efficiently. The application uses two main methods for image processing:
+
+1. **GPT-Vision via OpenAI API**: This method utilizes the OpenAI API to process images and extract relevant information. To use this feature, you need to obtain an API key from OpenAI and set it in your environment variables or configuration file.
+
+2. **Tesseract OCR**: As an alternative, the application also supports Tesseract OCR for image processing. This method is implemented in `ImageProcessor.Alt.js` and does not require an internet connection or API key.
+
+Both methods are integrated into the application, allowing for flexible image processing options based on your needs and preferences.

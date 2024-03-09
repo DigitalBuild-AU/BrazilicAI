@@ -23,7 +23,17 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Define the POST route for handling file uploads
-app.post('/upload', upload.single('timesheet'), (req, res) => {
+app.post('/upload', upload.single('image'), async (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ message: 'Please upload an image file.' });
+    }
+    try {
+        const processedFilePath = await processImage(req.file.path);
+        res.json({ status: 'processed', filePath: `/uploads/${req.file.filename}`, processedFilePath });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error processing image.', error: error.message });
+    }
     if (!req.file) {
         const noFileError = new Error('No file was uploaded.');
         console.error(noFileError);
@@ -57,6 +67,18 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3000;
 
+app.post('/upload-tesseract', upload.single('image'), async (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ message: 'Please upload an image file.' });
+    }
+    try {
+        const text = await processImageWithTesseract(req.file.path);
+        res.json({ status: 'processed', text });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error processing image with Tesseract.', error: error.message });
+    }
+});
 // Start the Express server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`); // gpt_pilot_debugging_log
