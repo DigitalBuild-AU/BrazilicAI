@@ -1,3 +1,6 @@
+/**
+ * Initializes event listeners and handlers once the DOM content is fully loaded.
+ */
 // Initialize when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Select the form element
@@ -25,6 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 processedImage.src = data.filePath; // Set the image source
                 downloadButton.href = data.filePath; // Set the download link
                 document.getElementById('result').style.display = 'block'; // Display the result section
+/**
+ * This script handles form submissions, file uploads, and UI interactions for the Brazilica Timesheet Application.
+ */
+                var processedImage = document.getElementById('processedImage');
+                var downloadButton = document.getElementById('downloadButton');
+                processedImage.src = data.filePath; // Set the image source
+                downloadButton.href = data.filePath; // Set the download link
+                document.getElementById('result').style.display = 'block'; // Display the result section
                 setTimeout(() => $('#spreadsheetPromptModal').modal('show'), 100); // Show the modal after a short delay
             } else {
                 throw new Error(`Unexpected status received: ${JSON.stringify(data)}`); // Handle unexpected status
@@ -36,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // TODO: Refactor modal interaction for better UX
+    /**
+    * Adds an event listener for the 'Yes' button within the modal to initiate spreadsheet processing.
+    */
     // Add event listener for the 'Yes' button in the modal
     document.getElementById('yesSpreadsheet').addEventListener('click', function() {
         console.log('Initiating spreadsheet processing'); // Log the initiation of spreadsheet processing
