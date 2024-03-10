@@ -16,6 +16,9 @@ describe('ImageProcessor', () => {
   });
 
   test('handles invalid input gracefully', () => {
+/**
+ * Tests if the processImage function calls the callback with the correct file path after processing.
+ */
     const invalidFilePath = '';
     const callback = jest.fn();
 
@@ -36,6 +39,15 @@ describe('ImageProcessor', () => {
     processImage(nonExistentFilePath, callback);
 
     // Expect the callback to be called, possibly with an error in future implementation
+/**
+ * Contains tests for the image processing functionality of the Brazilica Timesheet Application.
+ */
+    processImage(nonExistentFilePath, callback);
+
+    // Expect the callback to be called, possibly with an error in future implementation
     expect(callback).toHaveBeenCalled();
   });
 });
+/**
+ * Tests the behavior of the processImage function when encountering a non-existent file path.
+ */

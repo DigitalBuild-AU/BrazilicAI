@@ -15,6 +15,9 @@ describe('SpreadsheetProcessor', () => {
   });
 
   test('validates input before processing', () => {
+/**
+ * Tests if the processSpreadsheet function successfully converts timesheets into spreadsheet format.
+ */
     const invalidInput = null;
     const callback = jest.fn();
 
@@ -35,7 +38,16 @@ describe('SpreadsheetProcessor', () => {
 
     // Simulate triggering the error scenario
     callback(new Error('Conversion error'));
+/**
+ * Contains tests for the spreadsheet processing functionality of the Brazilica Timesheet Application.
+ */
+
+    // Simulate triggering the error scenario
+    callback(new Error('Conversion error'));
 
     expect(callback).toHaveBeenCalled();
   });
 });
+/**
+ * Tests how the processSpreadsheet function handles errors during the conversion process gracefully.
+ */
